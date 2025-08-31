@@ -1,0 +1,5 @@
+{
+  "solidity.formatter": "forge",
+  "solidity.telemetry": false,
+  "recon.defaultFuzzer": "echidna"
+}
