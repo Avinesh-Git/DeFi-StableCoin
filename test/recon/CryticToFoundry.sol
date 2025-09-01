@@ -8,7 +8,6 @@ import "forge-std/console2.sol";
 import {Test} from "forge-std/Test.sol";
 import {TargetFunctions} from "./TargetFunctions.sol";
 
-
 // forge test --match-contract CryticToFoundry -vv
 contract CryticToFoundry is Test, TargetFunctions, FoundryAsserts {
     function setUp() public {

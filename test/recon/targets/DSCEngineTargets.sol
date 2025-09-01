@@ -12,12 +12,8 @@ import {Panic} from "@recon/Panic.sol";
 
 import "src/DSCEngine.sol";
 
-abstract contract DSCEngineTargets is
-    BaseTargetFunctions,
-    Properties
-{
+abstract contract DSCEngineTargets is BaseTargetFunctions, Properties {
     /// CUSTOM TARGET FUNCTIONS - Add your own target functions here ///
-
 
     /// AUTO GENERATED TARGET FUNCTIONS - WARNING: DO NOT DELETE OR MODIFY THIS LINE ///
 
@@ -29,7 +25,11 @@ abstract contract DSCEngineTargets is
         dSCEngine.depositCollateral(tokenCollateralAddress, amountCollateral);
     }
 
-    function dSCEngine_depositCollateralAndMintDSC(address tokenCollateralAddress, uint256 amountCollateral, uint256 amountDscToMint) public asActor {
+    function dSCEngine_depositCollateralAndMintDSC(
+        address tokenCollateralAddress,
+        uint256 amountCollateral,
+        uint256 amountDscToMint
+    ) public asActor {
         dSCEngine.depositCollateralAndMintDSC(tokenCollateralAddress, amountCollateral, amountDscToMint);
     }
 
@@ -45,7 +45,11 @@ abstract contract DSCEngineTargets is
         dSCEngine.redeemCollateral(tokenCollateralAddress, amountCollateral);
     }
 
-    function dSCEngine_redeemCollateralForDSC(address tokenCollateralAddress, uint256 amountCollateral, uint256 amountDscToBurn) public asActor {
+    function dSCEngine_redeemCollateralForDSC(
+        address tokenCollateralAddress,
+        uint256 amountCollateral,
+        uint256 amountDscToBurn
+    ) public asActor {
         dSCEngine.redeemCollateralForDSC(tokenCollateralAddress, amountCollateral, amountDscToBurn);
     }
 }
