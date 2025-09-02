@@ -17,3 +17,12 @@ docs/
 crytic-export
 echidna
 medusa
+
+# Recon and fuzzing-related files
+test/recon/
+recon.json
+medusa.json
+
+# Setup helpers and dependencies
+lib/setup-helpers/
+lib/chimera/
